@@ -24,21 +24,21 @@ function conversion(){
 
    let degreeu = Number(DateInput.toUpperCase().replace("F", ""))
    let formula =  farheit => (farheit-32) * 5/9  ;
-   let degreuSign = "C"
+   let degreuSign = "ºC"
 
    if(celsiusExist){
      degreeu = Number(DateInput.toUpperCase().replace("C", ""))
     formula =  celsius => celsius * 9/5 + 32  ;;
-    degreuSign = "F"
+    degreuSign = "ºF"
    }
+   
    return  viewfinder.innerHTML= formula(degreeu) + degreuSign
-    console.log( DateInput)
     
 }
 
 
 try{
-    conversion 
+    conversion
 }
 catch(e){
     alert(e.message)
