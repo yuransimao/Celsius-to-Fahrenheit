@@ -1,10 +1,31 @@
-let Button = document.querySelectorAll("#Btn");
-let input = document.querySelectorAll("#Input")
-let date = input[0].value;
-let dados = String(date)
+let Button = document.getElementById("Btn");
+let input = document.getElementById("Input")
+let viewfinder = document.getElementById("viewfinder")
+let DateInput;
+
+input.addEventListener('change', (e)=> {
+    DateInput = e.target.value
+
+})
+Button.addEventListener("click",conversion)
+
 
 
 function conversion(){
-    console.log(dados)
+   const celsiusExist = DateInput.toUpperCase().includes('C')
+   const farhrenheit = DateInput.toUpperCase().includes('F')
+
+   if(!celsiusExist && !farhrenheit){
+    throw new Error('Verifique o grau')
+   }
+    console.log( DateInput)
+    
 }
-Button[0].addEventListener("click",conversion)
+
+
+try{
+    conversion 
+}
+catch(e){
+    alert(e.message)
+}
