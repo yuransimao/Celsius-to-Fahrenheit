@@ -16,23 +16,22 @@ Button.addEventListener("click",conversion)
 
 function conversion(){
    let celsiusExist = DateInput.toUpperCase().includes('C')
-   let farhrenheit = DateInput.toUpperCase().includes('F')
+   let farhrenheitExist = DateInput.toUpperCase().includes('F')
 
-   if(!celsiusExist && !farhrenheit){
+   if(!celsiusExist && !farhrenheitExist){
     throw new Error('Verifique o grau')
    }
 
-   let degreeu = Number(DateInput.toUpperCase().replace("F", ""))
+   let degree = Number(DateInput.toUpperCase().replace("F", ""))
    let formula =  farheit => (farheit-32) * 5/9  ;
-   let degreuSign = "ºC"
+   let degreeSign = farhrenheitExist ? "ºC" : "ºF"
 
    if(celsiusExist){
-     degreeu = Number(DateInput.toUpperCase().replace("C", ""))
+     degree = Number(DateInput.toUpperCase().replace("C", ""))
     formula =  celsius => celsius * 9/5 + 32  ;;
-    degreuSign = "ºF"
    }
    
-   return  viewfinder.innerHTML= formula(degreeu) + degreuSign
+   return  viewfinder.innerHTML= formula(degree) + degreeSign
     
 }
 
