@@ -4,10 +4,10 @@
 let Button = document.getElementById("Btn");
 let input = document.getElementById("Input")
 let viewfinder = document.getElementById("viewfinder")
-let DateInput;
+let DataInput;
 
-input.addEventListener('change', (e)=> {
-    DateInput = e.target.value
+input.addEventListener('change', (e) => {
+    DataInput = e.target.value
 
 })
 Button.addEventListener("click",conversion)
@@ -15,20 +15,22 @@ Button.addEventListener("click",conversion)
 
 
 function conversion(){
-   let celsiusExist = DateInput.toUpperCase().includes('C')
-   let farhrenheitExist = DateInput.toUpperCase().includes('F')
+
+   let celsiusExist = DataInput.toUpperCase().includes('C')
+   let farhrenheitExist = DataInput.toUpperCase().includes('F')
 
    if(!celsiusExist && !farhrenheitExist){
     throw new Error('Verifique o grau')
    }
 
-   let degree = Number(DateInput.toUpperCase().replace("F", ""))
+   let degree = Number(DataInput.toUpperCase().replace("F", ""))
    let formula =  farheit => (farheit-32) * 5/9  ;
    let degreeSign = farhrenheitExist ? "ºC" : "ºF"
 
    if(celsiusExist){
-     degree = Number(DateInput.toUpperCase().replace("C", ""))
-    formula =  celsius => celsius * 9/5 + 32  ;;
+    
+    degree = Number(DataInput.toUpperCase().replace("C", ""))
+    formula =  celsius => celsius * 9/5 + 32 ;
    }
    
    return  viewfinder.innerHTML= formula(degree) + degreeSign
