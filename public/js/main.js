@@ -38,16 +38,16 @@ function conversion(){
    viewfinder.innerHTML= total.toFixed(0) + degreeSign
    
    if(total >= 50){
-   return document.body.style.backgroundColor="red"
-    console.log(total)
+    return document.body.style.backgroundColor="brown"
+    
    }
    else if(total >= 20 && total<= 49){
    return document.body.style.backgroundColor="white"
-    console.log(total)
+   
    }
-   else if(total < 20){
-   return document.body.style.backgroundColor="gren"
-    console.log(total)
+   else if(total < 19){
+   return document.body.style.backgroundColor="blue";
+    
    }
 }
 
