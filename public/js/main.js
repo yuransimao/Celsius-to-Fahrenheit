@@ -1,8 +1,8 @@
 // f = farheit => (farheit-32) * 5/9  ;
 //c = celsius => celsius * 9/5 + 32  ;
 
-let Button = document.getElementById("Btn");
-let input = document.getElementById("Input")
+const Button = document.getElementById("Btn");
+const input = document.getElementById("Input")
 let viewfinder = document.getElementById("viewfinder")
 let DataInput;
 
@@ -33,7 +33,7 @@ function conversion(){
     formula =  celsius => celsius * 9/5 + 32 ;
    }
    
-   return  viewfinder.innerHTML= formula(degree) + degreeSign
+   return  viewfinder.innerHTML= formula(degree).toFixed(2) + degreeSign
     
 }
 
