@@ -34,23 +34,38 @@ body{
     gap:5px;
 }
 .text{
+    text-align: center;
     display:flex;
     gap:5px;
     padding: 10px;
     font-size: 0.7rem;
+    font-family: 'Franklin Gothic';
+    
+    
+    
 }
-
+.text h1{
+margin-left: 10%;
+}
+.text h2{
+    text-decoration: none;
+    margin-left: 30%;
+}
 .textareas{
     display: flex;
     gap: 5px;
     border-radius: 5px;
 }
 textarea{
+    text-align: center;
     outline: none;
     padding: 5px;
     width: 50%;
     resize: none;
     border-radius: 5px;
+    border: 2px solid;
+    font-size: 18px;
+   
 }
 
 button{
@@ -64,3 +79,6 @@ button{
     letter-spacing: 1px;   
 }
 
+button:hover{
+    opacity: 0.9;
+}
