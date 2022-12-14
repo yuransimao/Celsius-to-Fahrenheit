@@ -5,6 +5,7 @@ const Button = document.getElementById("Btn");
 const input = document.getElementById("Input")
 let viewfinder = document.getElementById("viewfinder")
 let DataInput;
+let total;
 
 input.addEventListener('change', (e) => {
     DataInput = e.target.value
@@ -24,17 +25,30 @@ function conversion(){
    }
 
    let degree = Number(DataInput.toUpperCase().replace("F", ""))
-   let formula =  farheit => (farheit-32) * 5/9  ;
+   let formula =  (farheit) =>{total = (farheit-32) * 5/9};
    let degreeSign = farhrenheitExist ? "ºC" : "ºF"
 
-   if(celsiusExist){
-    
+    if(celsiusExist){
     degree = Number(DataInput.toUpperCase().replace("C", ""))
-    formula =  celsius => celsius * 9/5 + 32 ;
+    formula =  (celsius) =>{total= celsius * 9/5 + 32 };
    }
+  
    
-   return  viewfinder.innerHTML= formula(degree).toFixed(2) + degreeSign
-    
+   formula(degree)
+   viewfinder.innerHTML= total.toFixed(0) + degreeSign
+   
+   if(total >= 50){
+   return document.body.style.backgroundColor="red"
+    console.log(total)
+   }
+   else if(total >= 20 && total<= 49){
+   return document.body.style.backgroundColor="white"
+    console.log(total)
+   }
+   else if(total < 20){
+   return document.body.style.backgroundColor="gren"
+    console.log(total)
+   }
 }
 
 

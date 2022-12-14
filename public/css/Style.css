@@ -1,84 +1,93 @@
 *{
-    box-sizing: border-box;
-    border:none ;
-    outline: none;
-    margin: 0;
-    padding: 0;
+box-sizing: border-box;
+border:none ;
+outline: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
 }
 
 body{
-    height: 100%;
-    width: 100%;
-    background: #000000
+height: 100%;
+width: 100%;
+background: #000000;
 }
 .wrapper{
-    display:flex;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-content:center;
-    flex-direction:column;
-    gap: 10px;
-    margin: 5px;
+display:flex;
+height: 100vh;
+width: 100vw;
+align-items: center;
+justify-content:center;
+flex-direction:column;
+gap: 10px;
+margin: 5px;
 }
 
 
 
 .Container{
-    width: 50%;
-    background: rgb(255, 254, 254);
-    padding: 15px;
-    box-shadow: 0 1px 2px #E000;
-    display:flex;
-    flex-direction: column;
-    gap:5px;
+width: 50%;
+background: rgb(212, 212, 212);
+padding: 15px;
+box-shadow: 0 1px 2px #E000;
+display:flex;
+flex-direction: column;
+gap:5px;
 }
+
 .text{
-    text-align: center;
-    display:flex;
-    gap:5px;
-    padding: 10px;
-    font-size: 0.7rem;
-    font-family: 'Franklin Gothic';
-    
-    
-    
+text-align: center;
+display:flex;
+gap:5px;
+padding: 10px;
+font-size: 0.7rem;
+font-family: 'Franklin Gothic';
 }
+
 .text h1{
-margin-left: 10%;
+margin-left: 15%;
 }
+
 .text h2{
-    text-decoration: none;
-    margin-left: 30%;
+text-decoration: none;
+margin-left: 35%;
 }
+
 .textareas{
-    display: flex;
-    gap: 5px;
-    border-radius: 5px;
+display: flex;
+gap: 5px;
+border-radius: 5px;
 }
+
 textarea{
-    text-align: center;
-    outline: none;
-    padding: 5px;
-    width: 50%;
-    resize: none;
-    border-radius: 5px;
-    border: 2px solid;
-    font-size: 18px;
+text-align: center;
+outline: none;
+padding: 5px;
+width: 50%;
+resize: none;
+border-radius: 5px;
+font-size: 18px;
+
+}
+
+
+.textarea1{
    
+background-color:rgba(224, 217, 217, 0.76);
 }
 
 button{
-    padding: 10px;
-    font-size: 18px;
-    background: #5240a1;
-    cursor: pointer;
-    color: antiquewhite;
-    font-weight: 600;
-    margin-top: 10px;
-    letter-spacing: 1px;   
+
+padding: 10px;
+font-size: 18px;
+background: #5240a1;
+cursor: pointer;
+color: antiquewhite;
+font-weight: 600;
+margin-top: 10px;
+letter-spacing: 1px;   
 }
 
 button:hover{
-    opacity: 0.9;
+opacity: 0.9;
 }
