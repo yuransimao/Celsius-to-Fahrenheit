@@ -29,7 +29,7 @@ margin: 5px;
 
 .Container{
 width: 50%;
-background: rgb(36, 36, 36);
+background: rgb(78, 57, 31);
 padding: 15px;
 box-shadow: 0 1px 2px #E000;
 display:flex;
@@ -44,7 +44,8 @@ display:flex;
 gap:5px;
 padding: 10px;
 font-size: 0.7rem;
-font-family: 'Franklin Gothic';
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: wheat;
 }
 
 .text h1{
@@ -54,6 +55,7 @@ margin-left: 15%;
 .text h2{
 text-decoration: none;
 margin-left: 35%;
+color:rgb(250, 194, 126);
 }
 
 .textareas{
