@@ -54,7 +54,7 @@ margin-left: 15%;
 
 .text h2{
 text-decoration: none;
-margin-left: 35%;
+margin-left: 28%;
 color:rgb(250, 194, 126);
 }
 
@@ -90,7 +90,8 @@ cursor: pointer;
 color: antiquewhite;
 font-weight: 600;
 margin-top: 10px;
-letter-spacing: 1px;   
+letter-spacing: 1px;  
+text-transform: capitalize; 
 }
 
 button:hover{
