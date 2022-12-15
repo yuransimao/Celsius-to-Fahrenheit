@@ -21,7 +21,7 @@ function conversion(){
    let farhrenheitExist = DataInput.toUpperCase().includes('F')
 
    if(!celsiusExist && !farhrenheitExist){
-    throw new Error('Verifique o grau')
+    throw alert('Verifique o grau')
    }
 
    let degree = Number(DataInput.toUpperCase().replace("F", ""))
@@ -36,8 +36,11 @@ function conversion(){
    
    formula(degree)
    viewfinder.innerHTML= total.toFixed(0) + degreeSign
-   
-   if(total >= 50){
+    checked()
+  
+}
+function checked(){
+     if(total >= 50){
     return document.body.style.backgroundColor="brown"
     
    }
@@ -47,14 +50,12 @@ function conversion(){
    }
    else if(total < 19){
    return document.body.style.backgroundColor="blue";
-    
-   }
 }
-
+}
 
 try{
     conversion
 }
 catch(e){
-    alert(e.message)
+    console.log(e.message)
 }
